@@ -1,0 +1,9 @@
+{
+  "name": "LUVIA - Tech-Enabled Property Maintenance",
+  "description": "LUVIA is a premium, scientific property maintenance and janitorial platform with escrow-backed security and gamified sustainability.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ]
+}
