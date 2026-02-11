@@ -1,7 +1,5 @@
-
 import { GoogleGenAI } from "@google/genai";
 
-// Fixed: Initializing GoogleGenAI with named parameter and direct process.env.API_KEY reference
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getLuviaResponse = async (prompt: string, context: 'marketing' | 'client' | 'provider' | 'marketplace' = 'marketing') => {
@@ -21,7 +19,6 @@ export const getLuviaResponse = async (prompt: string, context: 'marketing' | 'c
         temperature: 0.7,
       },
     });
-    // Correctly accessing .text property of GenerateContentResponse
     return response.text;
   } catch (error) {
     console.error("Gemini Error:", error);
